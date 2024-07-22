@@ -1,0 +1,11 @@
+act: 'gelu'
+batch_size: 16
+device: cuda
+epoch: 200
+
+
+interval: 5
+learning_rate: 0.005
+layer: 4
+hidden: 16
+save_path: result
