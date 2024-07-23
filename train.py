@@ -92,7 +92,7 @@ def Train():
 if __name__ == '__main__':
 
 
-    cfg = 'config/temp.yaml'
+    cfg = '.temp.yaml'
     with open(cfg, encoding='utf-8') as f:
         config = yaml.load(f.read(), Loader=yaml.FullLoader)
     # config['valindex'] = ValIndex
@@ -104,7 +104,7 @@ if __name__ == '__main__':
     layers = config['layer']
     hidden = config['hidden']
     interval = config['interval']
-    savepath = config['save_path'] + '/pegnn/rotate/cons_5000/5/' + \
+    savepath = config['save_path'] + \
         datetime.now().strftime("%Y%m%d%H%M%S") + '_gelu'
     os.makedirs(savepath)
     with open(savepath + '/config.yaml', 'w', encoding='utf-8') as f:
